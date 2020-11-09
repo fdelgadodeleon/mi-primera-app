@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const nombre = "Federica";
+  const img = <img src="/img/foto.jpg" alt="atardecer" style={{width: 500, height: 500, textAlign: "center"}}/>
+
+  const main = (
+      <div className="main">
+          <h1 className="center">Primera aplicación React</h1>
+          <h2 className="center">Bienvenida {nombre}</h2>
+          {img}
+      </div>
   );
+
+  const header = <div className="header"/>;
+  const footer = <div className="footer"/>;
+
+  return (
+      <div>
+          {header}
+          {main}
+          {footer}
+      </div>
+ )
 }
 
 export default App;
